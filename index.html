@@ -17,57 +17,105 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <header class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-center py-16 shadow-lg">
+<body class="relative text-white">
+  <video autoplay muted loop class="video-bg">
+    <source src="https://www.videvo.net/videvo_files/converted/2017_10/preview/170902_03_Clouds_4k_013.mp433823.webm" type="video/webm">
+  </video>
+  <div class="overlay"></div>
+
+  <header class="text-center py-20">
     <h1 class="text-5xl font-bold tracking-wide">Vanshika</h1>
     <p class="mt-4 text-xl">Developer | Digital Marketer | Creative Strategist</p>
   </header>
 
   <main class="max-w-6xl mx-auto p-6 fade-in">
-    <section class="mb-14">
-      <h2 class="text-3xl font-bold mb-4 border-b-2 border-indigo-600 inline-block">About Me</h2>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">About Me</h2>
       <p class="text-lg leading-relaxed">
-        I'm a passionate Computer Science student with hands-on experience in software development, digital marketing, and social branding. I love combining creativity and logic to deliver impactful digital experiences — from full-stack development to managing complete social campaigns.
+        A passionate Computer Science student with real-world experience in software development, digital marketing, UI/UX and branding. I blend creativity and technology to build seamless, engaging digital solutions — from mobile apps to strategic content campaigns. I've worked across startups, freelance projects, and my own brand.
       </p>
     </section>
 
-    <section class="mb-14">
-      <h2 class="text-3xl font-bold mb-4 border-b-2 border-indigo-600 inline-block">Skills</h2>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Skills</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white p-4 rounded-xl shadow">🔧 <strong>Technical:</strong> HTML, CSS, JavaScript, Python, React Native, WordPress, SQL</div>
-        <div class="bg-white p-4 rounded-xl shadow">📊 <strong>Marketing & Media:</strong> Meta Ads, Google Analytics, SEO, Mailchimp, Reels</div>
-        <div class="bg-white p-4 rounded-xl shadow">💡 <strong>Soft Skills:</strong> Communication, Leadership, Problem Solving, Adaptability</div>
+        <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">🔧 <strong>Technical:</strong> HTML, CSS, JavaScript, Python, React Native, SQL, Firebase</div>
+        <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">📊 <strong>Marketing:</strong> Meta Ads, SEO, Analytics, Campaign Strategy, Reels</div>
+        <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">🎨 <strong>Design:</strong> Canva, Figma, Adobe Express, UI/UX</div>
+        <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">🚀 <strong>Product:</strong> Branding, Funnel Strategy, Customer Insight, Digital Ops</div>
+        <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">💬 <strong>Soft Skills:</strong> Communication, Leadership, Time Management</div>
       </div>
     </section>
 
-    <section class="mb-14">
-      <h2 class="text-3xl font-bold mb-4 border-b-2 border-indigo-600 inline-block">Projects</h2>
-      <div class="grid gap-6 md:grid-cols-2">
-        <div class="bg-white p-6 rounded-xl shadow hover:scale-105 transition-transform duration-300">
-          <h3 class="text-xl font-semibold mb-2">💍 Vaneecian – Jewelry Brand</h3>
-          <p>Launched and scaled a jewelry brand with 500+ orders. Developed mobile app, built digital presence, and handled full-stack operations with 90.4% ROI.</p>
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Projects</h2>
+      <div class="grid gap-8 md:grid-cols-2">
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
+          <h3 class="text-xl font-semibold mb-2">📱 Vaneecian App – Jewelry Recommendation Engine</h3>
+          <p>A React Native mobile app built for my jewelry brand that recommends accessories using layman input or outfit images. Integrated ML-based suggestion, cart, and social share features.</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:scale-105 transition-transform duration-300">
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
           <h3 class="text-xl font-semibold mb-2">🧾 Python GUI Invoice Generator</h3>
-          <p>Desktop app using Python to auto-generate invoices for e-commerce orders — enhancing accuracy and speed of order processing.</p>
+          <p>Developed a GUI desktop app using Python for automatic order invoicing. Integrated with brand order flow to simplify billing and stock recording.</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:scale-105 transition-transform duration-300">
-          <h3 class="text-xl font-semibold mb-2">📣 Innoskill Fest Campaign</h3>
-          <p>Planned & executed a high-engagement marketing booth during tech fest. Designed visual materials and drove ₹13,000 revenue with ₹5,000 budget.</p>
+        <div class="bg-white bg-opacity-10 p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
+          <h3 class="text-xl font-semibold mb-2">🎪 Innoskill Tech Fest Booth</h3>
+          <p>Conceptualized & led a high-engagement pop-up booth. Designed media assets and generated ₹13,000+ from a ₹5,000 investment. Won "Most Engaging Booth" award.</p>
         </div>
       </div>
     </section>
 
-    <section class="mb-14">
-      <h2 class="text-3xl font-bold mb-4 border-b-2 border-indigo-600 inline-block">Certifications</h2>
-      <ul class="list-disc list-inside text-lg">
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Certifications</h2>
+      <ul class="list-disc list-inside text-lg space-y-1">
         <li>🎓 Google Fundamentals of Digital Marketing</li>
         <li>📘 Meta Blueprint – Social Media Marketing</li>
         <li>🐍 Python for Everybody – Coursera</li>
+        <li>🖼️ Figma UI UX Design (Basic)</li>
+        <li>🚀 Digital Advertising Foundations – LinkedIn</li>
       </ul>
     </section>
+
+    <section class="mb-16 text-center">
+      <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Contact</h2>
+      <p class="text-lg">📧 your.email@example.com</p>
+      <div class="mt-4 space-x-6">
+        <a href="#" class="text-pink-400 hover:underline">LinkedIn</a>
+        <a href="#" class="text-pink-400 hover:underline">GitHub</a>
+        <a href="#" class="text-pink-400 hover:underline">Instagram</a>
+      </div>
+      <div class="mt-6">
+        <a href="#" class="inline-block px-6 py-2 text-white bg-pink-500 hover:bg-pink-600 rounded-full transition">Download Resume</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-black bg-opacity-70 text-white text-center py-6">
+    <p>&copy; 2025 Vanshika. Built with ❤️ using Tailwind CSS & creativity.</p>
+  </footer>
+</body>
+</html>
+
 
     <section class="mb-14 text-center">
       <h2 class="text-3xl font-bold mb-4 border-b-2 border-indigo-600 inline-block">Contact</h2>
