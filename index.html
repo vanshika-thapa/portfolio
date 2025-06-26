@@ -9,136 +9,135 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom right, #1e1f4b, #8f1f63, #f06292);
+      background: linear-gradient(to bottom right, #140e27, #42044c, #e83e8c);
     }
     .fade-in {
-      animation: fadeIn 1s ease-in-out forwards;
+      animation: fadeIn 1s ease-out forwards;
     }
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
+      from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    .avatar {
-      animation: float 2s ease-in-out infinite;
+    .avatar-float {
+      animation: float 2.5s ease-in-out infinite;
     }
     @keyframes float {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+      50% { transform: translateY(-8px); }
     }
   </style>
 </head>
-<body class="text-white relative">
+<body class="text-white">
 
-<!-- Background Music -->
+<!-- Music -->
 <audio autoplay loop>
   <source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_d41aa7a05c.mp3?filename=soft-ambient-113310.mp3" type="audio/mp3">
 </audio>
 
-<!-- AI Avatar Greeting -->
-<div class="absolute top-4 left-4 flex items-center space-x-2 avatar">
-  <img src="https://api.dicebear.com/7.x/bottts-neutral/svg?seed=HiVanshika" alt="AI Avatar" class="w-12 h-12">
-  <div class="bg-white text-black px-3 py-1 rounded-full text-sm font-semibold shadow">Hi 👋 I'm Vanshika's AI buddy!</div>
+<!-- AI Avatar -->
+<div class="absolute top-4 left-4 flex items-center space-x-2 avatar-float">
+  <img src="https://api.dicebear.com/7.x/bottts-neutral/svg?seed=Hi" alt="AI Avatar" class="w-10 h-10">
+  <div class="bg-white text-black px-3 py-1 rounded-full text-sm font-medium shadow">Hi! I’m your virtual guide 😊</div>
 </div>
 
-<!-- Toggle Dark Mode -->
-<div class="absolute top-5 right-5">
-  <button onclick="toggleDarkMode()" class="bg-white text-black px-3 py-1 rounded shadow">Toggle Mode</button>
+<!-- Toggle Mode (Optional) -->
+<div class="absolute top-4 right-4">
+  <button onclick="document.documentElement.classList.toggle('dark')" class="bg-white text-black px-3 py-1 rounded shadow">Toggle Mode</button>
 </div>
 
-<header class="text-center py-20 fade-in">
-  <img src="your-profile-pic.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-pink-400">
-  <h1 class="text-5xl font-extrabold tracking-wide uppercase">Vanshika</h1>
-  <p class="mt-4 text-xl font-medium">Developer | Digital Marketer | Creative Strategist</p>
+<!-- Header -->
+<header class="text-center py-16 fade-in">
+  <img src="your-profile.jpg" alt="Vanshika" class="w-28 h-28 rounded-full mx-auto border-4 border-pink-400 shadow-xl mb-4">
+  <h1 class="text-4xl md:text-5xl font-extrabold tracking-wide uppercase">Vanshika</h1>
+  <p class="mt-3 text-lg md:text-xl font-medium">Developer • Digital Marketer • Creative Strategist</p>
 </header>
 
 <main class="max-w-6xl mx-auto px-6 fade-in">
+
   <!-- About -->
-  <section class="mb-16">
+  <section class="mb-12">
     <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">About Me</h2>
     <p class="text-lg leading-relaxed">
-      A passionate Computer Science student with real-world experience in software development, digital marketing, UI/UX, and branding.
-      I blend creativity and tech to build seamless digital solutions — from apps to marketing strategies across startups, freelance, and my own brand.
+      I’m a Computer Science student and digital innovator with expertise in building user-first products.
+      From coding mobile apps to leading high-impact marketing campaigns and launching my own brand,
+      I love combining creativity with functionality.
     </p>
   </section>
 
   <!-- Skills -->
-  <section class="mb-16">
+  <section class="mb-12">
     <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Skills</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-white bg-opacity-20 p-4 rounded-xl shadow">🔧 <strong>Technical:</strong> HTML, CSS, JavaScript, Python, React Native, SQL, Firebase</div>
-      <div class="bg-white bg-opacity-20 p-4 rounded-xl shadow">📊 <strong>Marketing:</strong> Meta Ads, SEO, Analytics, Campaign Strategy, Reels</div>
-      <div class="bg-white bg-opacity-20 p-4 rounded-xl shadow">🎨 <strong>Design:</strong> Canva, Figma, Adobe Express, UI/UX</div>
-      <div class="bg-white bg-opacity-20 p-4 rounded-xl shadow">🚀 <strong>Product:</strong> Branding, Funnel Strategy, Customer Insight, Digital Ops</div>
-      <div class="bg-white bg-opacity-20 p-4 rounded-xl shadow">💬 <strong>Soft Skills:</strong> Communication, Leadership, Time Management</div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">💻 <strong>Tech:</strong> HTML, CSS, JS, Python, React Native, Firebase</div>
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">📈 <strong>Marketing:</strong> Meta Ads, SEO, Analytics</div>
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">🎨 <strong>Design:</strong> Canva, Figma, Adobe Express</div>
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">🚀 <strong>Product:</strong> Branding, Funnels, Strategy</div>
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">🧠 <strong>Soft:</strong> Leadership, Communication, Growth Mindset</div>
     </div>
   </section>
 
   <!-- Projects -->
-  <section class="mb-16">
+  <section class="mb-12">
     <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Projects</h2>
-    <div class="grid gap-8 md:grid-cols-2">
-      <div class="bg-white bg-opacity-20 p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
-        <h3 class="text-xl font-semibold mb-2">📱 Vaneecian App – Jewelry Recommendation Engine</h3>
-        <p>A React Native app for my jewelry brand that suggests accessories using outfit images or natural input. ML + cart + sharing!</p>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white bg-opacity-10 p-5 rounded-xl hover:scale-105 duration-300 shadow-lg">
+        <h3 class="text-xl font-semibold">📱 Vaneecian App</h3>
+        <p>A jewelry app that recommends products via outfit image or layman text. Built with React Native + ML features.</p>
       </div>
-      <div class="bg-white bg-opacity-20 p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
-        <h3 class="text-xl font-semibold mb-2">🧾 Python GUI Invoice Generator</h3>
-        <p>Desktop app for automatic billing, order entry, and stock tracking for brand Vaneecian.</p>
+      <div class="bg-white bg-opacity-10 p-5 rounded-xl hover:scale-105 duration-300 shadow-lg">
+        <h3 class="text-xl font-semibold">🧾 Invoice Generator</h3>
+        <p>Python GUI tool to generate invoices and manage stock for my jewelry business.</p>
       </div>
-      <div class="bg-white bg-opacity-20 p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
-        <h3 class="text-xl font-semibold mb-2">🎪 Innoskill Tech Fest Booth</h3>
-        <p>High-engagement booth with ₹13K+ revenue. Awarded for most user interaction & strategic design.</p>
+      <div class="bg-white bg-opacity-10 p-5 rounded-xl hover:scale-105 duration-300 shadow-lg">
+        <h3 class="text-xl font-semibold">🎪 Innoskill Booth</h3>
+        <p>₹13,000+ earned from ₹5K at a tech fest via a self-designed popup. Won ‘Most Engaging Booth’.</p>
       </div>
     </div>
   </section>
 
   <!-- Certifications -->
-  <section class="mb-16">
+  <section class="mb-12">
     <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Certifications</h2>
-    <ul class="list-disc list-inside text-lg space-y-1">
-      <li>🎓 Google Digital Marketing</li>
-      <li>📘 Meta Blueprint – Social Media Marketing</li>
-      <li>🐍 Python for Everybody – Coursera</li>
-      <li>🖼️ Figma UI/UX Design</li>
-      <li>🚀 Digital Ads Foundation – LinkedIn</li>
+    <ul class="list-disc list-inside text-lg space-y-2">
+      <li>Google Digital Marketing</li>
+      <li>Meta Blueprint – Social Media Marketing</li>
+      <li>Python for Everybody – Coursera</li>
+      <li>Figma UI/UX Design (Basic)</li>
+      <li>Digital Ads Foundations – LinkedIn</li>
     </ul>
   </section>
 
   <!-- Blog -->
-  <section class="mb-16">
+  <section class="mb-12">
     <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Blog</h2>
     <div class="space-y-4">
-      <div class="bg-white bg-opacity-20 p-4 rounded-xl">
-        <h3 class="text-2xl font-semibold">The Power of Personal Branding</h3>
-        <p class="mt-1">Why every techie should share their story and build an audience online.</p>
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl">
+        <h3 class="text-2xl font-semibold">🌐 Power of Personal Branding</h3>
+        <p class="mt-1">Why developers and founders must build their online presence and show their process.</p>
       </div>
-      <div class="bg-white bg-opacity-20 p-4 rounded-xl">
-        <h3 class="text-2xl font-semibold">Design Tools I Love</h3>
-        <p class="mt-1">Speeding up UI/UX and content design using Canva, Figma, and Express.</p>
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl">
+        <h3 class="text-2xl font-semibold">🎨 Design Tools I Use</h3>
+        <p class="mt-1">How I use Canva & Figma to deliver fast, aesthetic outputs for brand and campaigns.</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact Form -->
+  <!-- Contact -->
   <section class="mb-16 text-center">
     <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Contact Me</h2>
-    <form action="YOUR_FORMSPREE_LINK_HERE" method="POST" class="max-w-xl mx-auto space-y-4">
-      <input type="text" name="name" placeholder="Name" class="w-full p-3 rounded bg-white text-black" required>
-      <input type="email" name="email" placeholder="Email" class="w-full p-3 rounded bg-white text-black" required>
-      <textarea rows="5" name="message" placeholder="Message" class="w-full p-3 rounded bg-white text-black" required></textarea>
-      <button type="submit" class="px-6 py-2 bg-pink-600 text-white rounded hover:bg-pink-700">Send Message</button>
+    <form action="https://formspree.io/f/yourformid" method="POST" class="max-w-lg mx-auto space-y-4">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded bg-white text-black">
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded bg-white text-black">
+      <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-3 rounded bg-white text-black"></textarea>
+      <button type="submit" class="bg-pink-600 hover:bg-pink-700 px-6 py-2 text-white rounded font-semibold">Send Message</button>
     </form>
   </section>
 </main>
 
-<footer class="bg-black bg-opacity-60 text-center py-6">
-  <p class="text-white">&copy; 2025 Vanshika. Designed with hello 💖 & TailwindCSS.</p>
+<!-- Footer -->
+<footer class="bg-black bg-opacity-60 text-center py-5">
+  <p class="text-white text-sm">&copy; 2025 Vanshika. Built with ❤️ using Tailwind CSS, AI, and Creativity.</p>
 </footer>
 
-<script>
-  function toggleDarkMode() {
-    document.documentElement.classList.toggle('dark');
-  }
-</script>
 </body>
 </html>
