@@ -3,94 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vanshika | Portfolio</title>
+  <title>My Professional Portfolio</title>
+  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/babel-standalone@7.22.5/babel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom right, #1e1e2f, #642b73);
-      color: white;
-    }
-    .floaty {
-      animation: float 3s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-  </style>
 </head>
-<body class="text-white">
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    function App() {
+      const [formData, setFormData] = React.useState({
+        name: '',
+        email: '',
+        message: ''
+      });
+      const [status, setStatus] = React.useState('');
 
-<!-- Background Music -->
-<audio autoplay loop>
-  <source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_d41aa7a05c.mp3?filename=soft-ambient-113310.mp3" type="audio/mp3">
-</audio>
+      const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+      };
 
-<!-- AI Avatar Greeting -->
-<div class="fixed top-4 left-4 flex items-center gap-2 floaty z-50">
-  <img src="https://api.dicebear.com/7.x/bottts-neutral/svg?seed=Hi" class="w-10 h-10" alt="AI Avatar">
-  <div class="bg-white text-black px-4 py-1 rounded-full text-sm font-semibold shadow">Hi! I’m your virtual guide 😊</div>
-</div>
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        emailjs.send(
+          'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+          'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+          formData,
+          'YOUR_USER_ID' // Replace with your EmailJS user ID
+        ).then(
+          () => {
+            setStatus('Message sent successfully!');
+            setFormData({ name: '', email: '', message: '' });
+          },
+          () => {
+            setStatus('Failed to send message. Please try again.');
+          }
+        );
+      };
 
-<!-- Container -->
-<div class="max-w-4xl mx-auto px-6 py-20 text-center">
-  <img src="your-profile.jpg" class="w-28 h-28 mx-auto rounded-full border-4 border-pink-400 shadow-lg mb-4" alt="Profile Picture">
-  <h1 class="text-4xl font-bold uppercase tracking-wider">Vanshika</h1>
-  <p class="text-xl mt-2 font-light">Developer • Digital Marketer • Creative Strategist</p>
+      return (
+        <div className="min-h-screen bg-gray-900 text-white font-sans">
+          {/* Hero Section with AI Avatar */}
+          <header className="py-16 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
+            <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+              <img
+                src="https://via.placeholder.com/300x300?text=AI+Avatar" // Replace with your AI avatar image URL
+                alt="AI Avatar"
+                className="w-48 h-48 rounded-full border-4 border-white shadow-lg mb-6 md:mb-0 md:mr-8"
+              />
+              <div>
+                <h1 className="text-4xl md:text-5xl font-bold">Hi Everyone!</h1>
+                <p className="mt-4 text-lg md:text-xl">
+                  Welcome to my portfolio. I'm a passionate tech enthusiast showcasing my work and skills.
+                </p>
+              </div>
+            </div>
+          </header>
 
-  <section class="mt-12 text-left">
-    <h2 class="text-3xl font-bold text-pink-400 mb-3">About Me</h2>
-    <p class="text-lg leading-relaxed">
-      I’m a Computer Science student and digital innovator with expertise in building user-first products. From coding mobile apps to leading high-impact marketing campaigns and launching my own brand, I love combining creativity with functionality.
-    </p>
-  </section>
+          {/* About Section */}
+          <section className="py-16 px-4 bg-gray-800">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold mb-6">About Me</h2>
+              <p className="text-lg">
+                I'm a tech professional with expertise in [Your Skills, e.g., web development, AI, etc.]. Explore my projects and get in touch!
+              </p>
+            </div>
+          </section>
 
-  <section class="mt-10 text-left">
-    <h2 class="text-3xl font-bold text-pink-400 mb-3">Skills</h2>
-    <ul class="space-y-2 text-lg">
-      <li><strong>🔧 Tech:</strong> HTML, CSS, JS, Python, React Native, Firebase</li>
-      <li><strong>📊 Marketing:</strong> Meta Ads, SEO, Analytics</li>
-      <li><strong>🎨 Design:</strong> Canva, Figma, Adobe Express</li>
-      <li><strong>🚀 Product:</strong> Branding, Funnels, Strategy</li>
-      <li><strong>💬 Soft:</strong> Leadership, Communication, Growth Mindset</li>
-    </ul>
-  </section>
+          {/* Contact Section */}
+          <section className="py-16 px-4 bg-gray-900">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
+              <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <div className="mb-4">
+                  <p className="text-lg">Email: <a href="mailto:your.email@example.com" className="text-blue-400 hover:underline">your.email@example.com</a></p>
+                </div>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium">Name</label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="w-full p-2 mt-1 bg-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="w-full p-2 mt-1 bg-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium">Message</label>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      rows="5"
+                      className="w-full p-2 mt-1 bg-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-md transition duration-300"
+                  >
+                    Send Message
+                  </button>
+                  {status && <p className="mt-4 text-sm">{status}</p>}
+                </form>
+              </div>
+            </div>
+          </section>
 
-  <section class="mt-10 text-left">
-    <h2 class="text-3xl font-bold text-pink-400 mb-3">Projects</h2>
-    <div class="space-y-3">
-      <div>
-        <h3 class="text-xl font-semibold">📱 Vaneecian App</h3>
-        <p>Jewelry recommendation app using ML & React Native.</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-semibold">🧾 Invoice Generator</h3>
-        <p>Python-based GUI to auto-generate invoices and track stock.</p>
-      </div>
-      <div>
-        <h3 class="text-xl font-semibold">🎪 Innoskill Booth</h3>
-        <p>Engaging tech-fest stall generating ₹13,000+ from ₹5000.</p>
-      </div>
-    </div>
-  </section>
+          {/* Footer */}
+          <footer className="py-8 px-4 bg-gray-800 text-center">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+          </footer>
+        </div>
+      );
+    }
 
-  <section class="mt-10 text-left">
-    <h2 class="text-3xl font-bold text-pink-400 mb-3">Contact Me</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
-      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 text-black rounded">
-      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 text-black rounded">
-      <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-3 text-black rounded"></textarea>
-      <button type="submit" class="bg-pink-500 hover:bg-pink-600 px-6 py-2 rounded text-white font-semibold">Send Message</button>
-    </form>
-  </section>
-</div>
-
-<!-- Footer -->
-<footer class="text-center py-6 bg-black bg-opacity-40">
-  <p class="text-sm">&copy; 2025 Vanshika. Built with ❤️ using Tailwind CSS.</p>
-</footer>
-
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
 </body>
 </html>
