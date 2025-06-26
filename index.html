@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="transition-colors duration-500">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,13 +9,13 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom right, #140e27, #42044c, #e83e8c);
+      background: linear-gradient(135deg, #1f1c2c, #928DAB);
     }
     .fade-in {
       animation: fadeIn 1s ease-out forwards;
     }
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
     .avatar-float {
@@ -29,114 +29,92 @@
 </head>
 <body class="text-white">
 
-<!-- Music -->
+<!-- Background Music -->
 <audio autoplay loop>
   <source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_d41aa7a05c.mp3?filename=soft-ambient-113310.mp3" type="audio/mp3">
 </audio>
 
 <!-- AI Avatar -->
-<div class="absolute top-4 left-4 flex items-center space-x-2 avatar-float">
-  <img src="https://api.dicebear.com/7.x/bottts-neutral/svg?seed=Hi" alt="AI Avatar" class="w-10 h-10">
-  <div class="bg-white text-black px-3 py-1 rounded-full text-sm font-medium shadow">Hi! I’m your virtual guide 😊</div>
+<div class="fixed top-4 left-4 flex items-center space-x-2 avatar-float z-50">
+  <img src="https://api.dicebear.com/7.x/bottts-neutral/svg?seed=HiV" alt="AI Avatar" class="w-10 h-10">
+  <div class="bg-white text-black px-3 py-1 rounded-full text-sm font-medium shadow">Hi! I’m Vanshika's AI buddy 👋</div>
 </div>
 
-<!-- Toggle Mode (Optional) -->
-<div class="absolute top-4 right-4">
-  <button onclick="document.documentElement.classList.toggle('dark')" class="bg-white text-black px-3 py-1 rounded shadow">Toggle Mode</button>
-</div>
+<!-- Main Content -->
+<div class="max-w-4xl mx-auto px-4 py-16 fade-in text-center">
 
-<!-- Header -->
-<header class="text-center py-16 fade-in">
-  <img src="your-profile.jpg" alt="Vanshika" class="w-28 h-28 rounded-full mx-auto border-4 border-pink-400 shadow-xl mb-4">
-  <h1 class="text-4xl md:text-5xl font-extrabold tracking-wide uppercase">Vanshika</h1>
-  <p class="mt-3 text-lg md:text-xl font-medium">Developer • Digital Marketer • Creative Strategist</p>
-</header>
-
-<main class="max-w-6xl mx-auto px-6 fade-in">
+  <!-- Profile -->
+  <img src="your-profile.jpg" alt="Vanshika Profile" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-pink-400 shadow-xl">
+  <h1 class="text-4xl md:text-5xl font-extrabold uppercase mb-2">Vanshika</h1>
+  <p class="text-xl font-medium mb-8">Developer | Digital Marketer | Creative Strategist</p>
 
   <!-- About -->
   <section class="mb-12">
-    <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">About Me</h2>
+    <h2 class="text-3xl font-bold mb-4 text-pink-300">About Me</h2>
     <p class="text-lg leading-relaxed">
-      I’m a Computer Science student and digital innovator with expertise in building user-first products.
-      From coding mobile apps to leading high-impact marketing campaigns and launching my own brand,
-      I love combining creativity with functionality.
+      I'm a passionate Computer Science student with hands-on experience in full-stack development, digital marketing,
+      branding, and launching creative products. From mobile apps to marketing funnels, I bring ideas to life across code and content.
     </p>
   </section>
 
   <!-- Skills -->
   <section class="mb-12">
-    <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Skills</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">💻 <strong>Tech:</strong> HTML, CSS, JS, Python, React Native, Firebase</div>
-      <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">📈 <strong>Marketing:</strong> Meta Ads, SEO, Analytics</div>
-      <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">🎨 <strong>Design:</strong> Canva, Figma, Adobe Express</div>
-      <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">🚀 <strong>Product:</strong> Branding, Funnels, Strategy</div>
-      <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">🧠 <strong>Soft:</strong> Leadership, Communication, Growth Mindset</div>
+    <h2 class="text-3xl font-bold mb-4 text-pink-300">Skills</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left text-base">
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl">💻 <strong>Technical:</strong> HTML, CSS, JS, Python, React Native, Firebase</div>
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl">📊 <strong>Marketing:</strong> SEO, Meta Ads, Reels, Analytics</div>
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl">🎨 <strong>Design:</strong> Canva, Figma, Adobe Express</div>
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl">🚀 <strong>Product:</strong> Branding, Funnels, Campaign Strategy</div>
     </div>
   </section>
 
   <!-- Projects -->
   <section class="mb-12">
-    <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Projects</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-white bg-opacity-10 p-5 rounded-xl hover:scale-105 duration-300 shadow-lg">
+    <h2 class="text-3xl font-bold mb-4 text-pink-300">Projects</h2>
+    <div class="space-y-4 text-left">
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl">
         <h3 class="text-xl font-semibold">📱 Vaneecian App</h3>
-        <p>A jewelry app that recommends products via outfit image or layman text. Built with React Native + ML features.</p>
+        <p>A jewelry recommendation app using ML & React Native. Suggests items based on outfits or text.</p>
       </div>
-      <div class="bg-white bg-opacity-10 p-5 rounded-xl hover:scale-105 duration-300 shadow-lg">
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl">
         <h3 class="text-xl font-semibold">🧾 Invoice Generator</h3>
-        <p>Python GUI tool to generate invoices and manage stock for my jewelry business.</p>
+        <p>Python GUI app for auto-generating invoices and tracking sales & stock.</p>
       </div>
-      <div class="bg-white bg-opacity-10 p-5 rounded-xl hover:scale-105 duration-300 shadow-lg">
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl">
         <h3 class="text-xl font-semibold">🎪 Innoskill Booth</h3>
-        <p>₹13,000+ earned from ₹5K at a tech fest via a self-designed popup. Won ‘Most Engaging Booth’.</p>
+        <p>Designed & ran a pop-up stall. Earned ₹13,000+ from ₹5K. Won "Most Engaging Booth".</p>
       </div>
     </div>
   </section>
 
   <!-- Certifications -->
   <section class="mb-12">
-    <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Certifications</h2>
-    <ul class="list-disc list-inside text-lg space-y-2">
-      <li>Google Digital Marketing</li>
-      <li>Meta Blueprint – Social Media Marketing</li>
-      <li>Python for Everybody – Coursera</li>
-      <li>Figma UI/UX Design (Basic)</li>
-      <li>Digital Ads Foundations – LinkedIn</li>
+    <h2 class="text-3xl font-bold mb-4 text-pink-300">Certifications</h2>
+    <ul class="list-disc list-inside text-left space-y-1 text-lg">
+      <li>📘 Meta Blueprint – Social Media Marketing</li>
+      <li>🐍 Python for Everybody – Coursera</li>
+      <li>🎓 Google Digital Marketing</li>
+      <li>🖌️ Figma UI/UX Design</li>
+      <li>🚀 Digital Ads – LinkedIn Learning</li>
     </ul>
   </section>
 
-  <!-- Blog -->
-  <section class="mb-12">
-    <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Blog</h2>
-    <div class="space-y-4">
-      <div class="bg-white bg-opacity-10 p-4 rounded-xl">
-        <h3 class="text-2xl font-semibold">🌐 Power of Personal Branding</h3>
-        <p class="mt-1">Why developers and founders must build their online presence and show their process.</p>
-      </div>
-      <div class="bg-white bg-opacity-10 p-4 rounded-xl">
-        <h3 class="text-2xl font-semibold">🎨 Design Tools I Use</h3>
-        <p class="mt-1">How I use Canva & Figma to deliver fast, aesthetic outputs for brand and campaigns.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="mb-16 text-center">
-    <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Contact Me</h2>
-    <form action="https://formspree.io/f/yourformid" method="POST" class="max-w-lg mx-auto space-y-4">
+  <!-- Contact Form -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold mb-4 text-pink-300">Contact Me</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4 text-left max-w-md mx-auto">
       <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded bg-white text-black">
       <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded bg-white text-black">
-      <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-3 rounded bg-white text-black"></textarea>
-      <button type="submit" class="bg-pink-600 hover:bg-pink-700 px-6 py-2 text-white rounded font-semibold">Send Message</button>
+      <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-3 rounded bg-white text-black"></textarea>
+      <button type="submit" class="bg-pink-500 hover:bg-pink-600 px-5 py-2 rounded text-white font-semibold">Send Message</button>
     </form>
   </section>
-</main>
+
+</div>
 
 <!-- Footer -->
-<footer class="bg-black bg-opacity-60 text-center py-5">
-  <p class="text-white text-sm">&copy; 2025 Vanshika. Built with ❤️ using Tailwind CSS, AI, and Creativity.</p>
+<footer class="text-center py-6 bg-black bg-opacity-30">
+  <p class="text-white text-sm">&copy; 2025 Vanshika. Built with ❤️ using Tailwind CSS and creativity.</p>
 </footer>
 
 </body>
