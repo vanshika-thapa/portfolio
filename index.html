@@ -1,104 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vanshika | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0f172a;
-      color: #f1f5f9;
-    }
-
-    .highlight {
-      color: #38bdf8;
-    }
-
-    .card {
-      background: #1e293b;
-      border-radius: 1rem;
-      padding: 2rem;
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
-    }
+    body { font-family: 'Inter', sans-serif; }
   </style>
 </head>
-
-<body class="min-h-screen flex flex-col items-center p-6">
-  <!-- Header -->
-  <header class="w-full max-w-5xl text-center mb-12">
-    <h1 class="text-4xl sm:text-5xl font-extrabold">Hi, I'm <span class="highlight">Vanshika</span></h1>
-    <p class="mt-4 text-xl text-slate-300">Developer | Designer | Entrepreneur</p>
+<body class="bg-gray-900 text-white min-h-screen">
+  <header class="text-center py-10">
+    <img src="your-photo.jpg" alt="Vanshika" class="mx-auto w-28 h-28 rounded-full border-4 border-teal-500 mb-4">
+    <h1 class="text-4xl font-bold">Hi, I'm <span class="text-teal-400">Vanshika</span></h1>
+    <p class="text-lg mt-2">Developer | Designer | Entrepreneur</p>
   </header>
 
-  <!-- About Section -->
-  <section class="w-full max-w-5xl grid md:grid-cols-2 gap-8 mb-16">
-    <div class="card">
-      <h2 class="text-2xl font-bold mb-4">About Me</h2>
-      <p>
-        I’m an innovative tech enthusiast building digital solutions for real-world problems. From sleek frontend design to smart business strategies, I craft experiences that leave an impact.
-      </p>
+  <div class="w-full flex justify-center mb-6">
+    <div class="flex gap-4">
+      <button onclick="showTab('about')" class="bg-teal-600 px-4 py-2 rounded hover:bg-teal-500">About</button>
+      <button onclick="showTab('skills')" class="bg-teal-600 px-4 py-2 rounded hover:bg-teal-500">Skills</button>
+      <button onclick="showTab('projects')" class="bg-teal-600 px-4 py-2 rounded hover:bg-teal-500">Projects</button>
+      <button onclick="showTab('contact')" class="bg-teal-600 px-4 py-2 rounded hover:bg-teal-500">Contact</button>
     </div>
-    <div class="card">
-      <h2 class="text-2xl font-bold mb-4">Skills</h2>
-      <ul class="list-disc list-inside space-y-1">
+  </div>
+
+  <main class="max-w-4xl mx-auto space-y-10 px-6">
+    <section id="about" class="tab">
+      <h2 class="text-2xl font-semibold border-b border-gray-700 pb-2">About Me</h2>
+      <p class="mt-4">I'm an innovative tech enthusiast building digital solutions for real-world problems. From sleek frontend design to smart business strategies, I craft experiences that leave an impact.</p>
+    </section>
+
+    <section id="skills" class="tab hidden">
+      <h2 class="text-2xl font-semibold border-b border-gray-700 pb-2">Skills</h2>
+      <ul class="list-disc list-inside mt-4 space-y-1">
         <li>HTML, CSS, JavaScript, React, Tailwind</li>
         <li>Python, Flask, Node.js</li>
         <li>Figma, Adobe XD</li>
         <li>Branding, UI/UX, Marketing</li>
       </ul>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects Section -->
-  <section class="w-full max-w-5xl mb-16">
-    <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="card">
-        <h3 class="text-xl font-semibold mb-2">Jewelry App</h3>
-        <p>React Native app that recommends jewelry based on photos or keywords. Used by 500+ users across India.</p>
+    <section id="projects" class="tab hidden">
+      <h2 class="text-2xl font-semibold border-b border-gray-700 pb-2">Projects</h2>
+      <div class="space-y-6 mt-4">
+        <div>
+          <h3 class="text-lg font-bold">Jewelry App</h3>
+          <p>React Native app that recommends jewelry based on photos or keywords. Used by 500+ users across India.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold">Invoice Generator</h3>
+          <p>Python GUI-based invoice system for small businesses. Tracks customer data and generates PDF bills.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold">Forensics Portal</h3>
+          <p>Case study system and reporting portal built with Flask and MongoDB for real-time investigation logs.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3 class="text-xl font-semibold mb-2">Invoice Generator</h3>
-        <p>Python GUI-based invoice system for small businesses. Tracks customer data and generates PDF bills.</p>
-      </div>
-      <div class="card">
-        <h3 class="text-xl font-semibold mb-2">Forensics Portal</h3>
-        <p>Case study system and reporting portal built with Flask and MongoDB for real-time investigation logs.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Experience Section -->
-  <section class="w-full max-w-5xl mb-16">
-    <h2 class="text-3xl font-bold text-center mb-8">Experience</h2>
-    <div class="card">
-      <ul class="space-y-4">
-        <li>
-          <strong>Operations Executive Intern</strong> – Handling dev, digital marketing, and social media management.
-        </li>
-        <li>
-          <strong>Research Intern – Quick Heal</strong> – Worked on malware analysis and digital forensics.
-        </li>
-        <li>
-          <strong>Vice President – MRU Cyber Squad</strong> – Leading cybersecurity events and outreach.</li>
-      </ul>
-    </div>
-  </section>
+    <section id="contact" class="tab hidden">
+      <h2 class="text-2xl font-semibold border-b border-gray-700 pb-2">Message Me</h2>
+      <form class="mt-4 space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-2 rounded bg-gray-800 border border-gray-700" required>
+        <input type="email" placeholder="Your Email" class="w-full p-2 rounded bg-gray-800 border border-gray-700" required>
+        <textarea placeholder="Your Message" class="w-full p-2 rounded bg-gray-800 border border-gray-700" rows="4" required></textarea>
+        <button type="submit" class="bg-teal-500 px-6 py-2 rounded hover:bg-teal-400">Send</button>
+      </form>
+    </section>
+  </main>
 
-  <!-- Contact Section -->
-  <section class="w-full max-w-5xl text-center mb-12">
-    <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
-    <p class="text-slate-300 mb-6">Looking for internships, collaborations, or freelance work.</p>
-    <a href="mailto:vanshika@example.com" class="bg-blue-500 hover:bg-blue-600 px-6 py-2 text-white rounded-xl transition">Email Me</a>
-  </section>
-
-  <footer class="text-slate-500 text-sm text-center mt-auto">
-    © 2025 Vanshika. All rights reserved.
-  </footer>
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.add('hidden'));
+      document.getElementById(id).classList.remove('hidden');
+    }
+    showTab('about');
+  </script>
 </body>
-
 </html>
