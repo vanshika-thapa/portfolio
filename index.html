@@ -5,141 +5,140 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vanshika | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #1e1f4b, #8f1f63, #f06292);
     }
     .fade-in {
-      animation: fadeIn 1s ease-in forwards;
+      animation: fadeIn 1s ease-in-out forwards;
     }
     @keyframes fadeIn {
-    
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    .video-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
+    .avatar {
+      animation: float 2s ease-in-out infinite;
     }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.2);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
   </style>
 </head>
-<body class="relative text-white dark:bg-gray-900 dark:text-gray-100">
-<video autoplay muted loop class="video-bg">
-  <source src="https://videos.pexels.com/video-files/6773874/6773874-uhd_2560_1440_30fps.mp4">
-</video>
-  <div class="overlay"></div>
+<body class="text-white relative">
 
-  <!-- Dark Mode Toggle -->
-  <div class="absolute top-5 right-5">
-    <button onclick="toggleDarkMode()" class="bg-white text-black px-3 py-1 rounded shadow">Toggle Mode</button>
-  </div>
+<!-- Background Music -->
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_d41aa7a05c.mp3?filename=soft-ambient-113310.mp3" type="audio/mp3">
+</audio>
 
-  <header class="text-center py-20">
-    <h1 class="text-5xl font-bold tracking-wide">Vanshika</h1>
-    <p class="mt-4 text-xl">Developer | Digital Marketer | Creative Strategist</p>
-  </header>
+<!-- AI Avatar Greeting -->
+<div class="absolute top-4 left-4 flex items-center space-x-2 avatar">
+  <img src="https://api.dicebear.com/7.x/bottts-neutral/svg?seed=HiVanshika" alt="AI Avatar" class="w-12 h-12">
+  <div class="bg-white text-black px-3 py-1 rounded-full text-sm font-semibold shadow">Hi 👋 I'm Vanshika's AI buddy!</div>
+</div>
 
-  <main class="max-w-6xl mx-auto p-6 fade-in">
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">About Me</h2>
-      <p class="text-lg leading-relaxed">
-        A passionate Computer Science student with real-world experience in software development, digital marketing, UI/UX and branding.
-        I blend creativity and technology to build seamless, engaging digital solutions — from mobile apps to strategic content campaigns.
-        I've worked across startups, freelance projects, and my own brand.
-      </p>
-    </section>
+<!-- Toggle Dark Mode -->
+<div class="absolute top-5 right-5">
+  <button onclick="toggleDarkMode()" class="bg-white text-black px-3 py-1 rounded shadow">Toggle Mode</button>
+</div>
 
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Skills</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">🔧 <strong>Technical:</strong> HTML, CSS, JavaScript, Python, React Native, SQL, Firebase</div>
-        <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">📊 <strong>Marketing:</strong> Meta Ads, SEO, Analytics, Campaign Strategy, Reels</div>
-        <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">🎨 <strong>Design:</strong> Canva, Figma, Adobe Express, UI/UX</div>
-        <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">🚀 <strong>Product:</strong> Branding, Funnel Strategy, Customer Insight, Digital Ops</div>
-        <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow">💬 <strong>Soft Skills:</strong> Communication, Leadership, Time Management</div>
+<header class="text-center py-20 fade-in">
+  <img src="your-profile-pic.jpg" alt="Profile Picture" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-pink-400">
+  <h1 class="text-5xl font-extrabold tracking-wide uppercase">Vanshika</h1>
+  <p class="mt-4 text-xl font-medium">Developer | Digital Marketer | Creative Strategist</p>
+</header>
+
+<main class="max-w-6xl mx-auto px-6 fade-in">
+  <!-- About -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">About Me</h2>
+    <p class="text-lg leading-relaxed">
+      A passionate Computer Science student with real-world experience in software development, digital marketing, UI/UX, and branding.
+      I blend creativity and tech to build seamless digital solutions — from apps to marketing strategies across startups, freelance, and my own brand.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Skills</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white bg-opacity-20 p-4 rounded-xl shadow">🔧 <strong>Technical:</strong> HTML, CSS, JavaScript, Python, React Native, SQL, Firebase</div>
+      <div class="bg-white bg-opacity-20 p-4 rounded-xl shadow">📊 <strong>Marketing:</strong> Meta Ads, SEO, Analytics, Campaign Strategy, Reels</div>
+      <div class="bg-white bg-opacity-20 p-4 rounded-xl shadow">🎨 <strong>Design:</strong> Canva, Figma, Adobe Express, UI/UX</div>
+      <div class="bg-white bg-opacity-20 p-4 rounded-xl shadow">🚀 <strong>Product:</strong> Branding, Funnel Strategy, Customer Insight, Digital Ops</div>
+      <div class="bg-white bg-opacity-20 p-4 rounded-xl shadow">💬 <strong>Soft Skills:</strong> Communication, Leadership, Time Management</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Projects</h2>
+    <div class="grid gap-8 md:grid-cols-2">
+      <div class="bg-white bg-opacity-20 p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
+        <h3 class="text-xl font-semibold mb-2">📱 Vaneecian App – Jewelry Recommendation Engine</h3>
+        <p>A React Native app for my jewelry brand that suggests accessories using outfit images or natural input. ML + cart + sharing!</p>
       </div>
-    </section>
-
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Projects</h2>
-      <div class="grid gap-8 md:grid-cols-2">
-        <div class="bg-white bg-opacity-10 p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
-          <h3 class="text-xl font-semibold mb-2">📱 Vaneecian App – Jewelry Recommendation Engine</h3>
-          <p>A React Native mobile app built for my jewelry brand that recommends accessories using layman input or outfit images.
-             Integrated ML-based suggestion, cart, and social share features.</p>
-        </div>
-        <div class="bg-white bg-opacity-10 p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
-          <h3 class="text-xl font-semibold mb-2">🧾 Python GUI Invoice Generator</h3>
-          <p>Developed a GUI desktop app using Python for automatic order invoicing.
-             Integrated with brand order flow to simplify billing and stock recording.</p>
-        </div>
-        <div class="bg-white bg-opacity-10 p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
-          <h3 class="text-xl font-semibold mb-2">🎪 Innoskill Tech Fest Booth</h3>
-          <p>Conceptualized & led a high-engagement pop-up booth. Designed media assets and generated ₹13,000+ from a ₹5,000 investment.
-             Won "Most Engaging Booth" award.</p>
-        </div>
+      <div class="bg-white bg-opacity-20 p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
+        <h3 class="text-xl font-semibold mb-2">🧾 Python GUI Invoice Generator</h3>
+        <p>Desktop app for automatic billing, order entry, and stock tracking for brand Vaneecian.</p>
       </div>
-    </section>
-
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Certifications</h2>
-      <ul class="list-disc list-inside text-lg space-y-1">
-        <li>🎓 Google Fundamentals of Digital Marketing</li>
-        <li>📘 Meta Blueprint – Social Media Marketing</li>
-        <li>🐍 Python for Everybody – Coursera</li>
-        <li>🖼️ Figma UI/UX Design (Basic)</li>
-        <li>🚀 Digital Advertising Foundations – LinkedIn</li>
-      </ul>
-    </section>
-
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Blog</h2>
-      <div class="space-y-4">
-        <div class="bg-white bg-opacity-10 p-4 rounded-xl">
-          <h3 class="text-2xl font-semibold">The Power of Personal Branding for Developers</h3>
-          <p class="mt-1">Why every developer should create content, own their space, and show their process online.</p>
-        </div>
-        <div class="bg-white bg-opacity-10 p-4 rounded-xl">
-          <h3 class="text-2xl font-semibold">Design Tools I Use as a Tech Founder</h3>
-          <p class="mt-1">Exploring Canva, Figma, and more for creating engaging and aesthetic designs fast.</p>
-        </div>
+      <div class="bg-white bg-opacity-20 p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
+        <h3 class="text-xl font-semibold mb-2">🎪 Innoskill Tech Fest Booth</h3>
+        <p>High-engagement booth with ₹13K+ revenue. Awarded for most user interaction & strategic design.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="mb-16 text-center">
-      <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Contact Me</h2>
-      <form class="max-w-xl mx-auto space-y-4">
-        <input type="text" placeholder="Name" class="w-full p-3 rounded bg-white text-black" required>
-        <input type="email" placeholder="Email" class="w-full p-3 rounded bg-white text-black" required>
-        <textarea rows="5" placeholder="Message" class="w-full p-3 rounded bg-white text-black" required></textarea>
-        <button type="submit" class="px-6 py-2 bg-pink-600 text-white rounded hover:bg-pink-700">Send Message</button>
-      </form>
-    </section>
-  </main>
+  <!-- Certifications -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Certifications</h2>
+    <ul class="list-disc list-inside text-lg space-y-1">
+      <li>🎓 Google Digital Marketing</li>
+      <li>📘 Meta Blueprint – Social Media Marketing</li>
+      <li>🐍 Python for Everybody – Coursera</li>
+      <li>🖼️ Figma UI/UX Design</li>
+      <li>🚀 Digital Ads Foundation – LinkedIn</li>
+    </ul>
+  </section>
 
-  <footer class="bg-black bg-opacity-70 text-white text-center py-6">
-    <p>&copy; 2025 Vanshika. Built with ❤️ using Tailwind CSS & creativity.</p>
-  </footer>
+  <!-- Blog -->
+  <section class="mb-16">
+    <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Blog</h2>
+    <div class="space-y-4">
+      <div class="bg-white bg-opacity-20 p-4 rounded-xl">
+        <h3 class="text-2xl font-semibold">The Power of Personal Branding</h3>
+        <p class="mt-1">Why every techie should share their story and build an audience online.</p>
+      </div>
+      <div class="bg-white bg-opacity-20 p-4 rounded-xl">
+        <h3 class="text-2xl font-semibold">Design Tools I Love</h3>
+        <p class="mt-1">Speeding up UI/UX and content design using Canva, Figma, and Express.</p>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    function toggleDarkMode() {
-      document.documentElement.classList.toggle('dark');
-    }
-  </script>
+  <!-- Contact Form -->
+  <section class="mb-16 text-center">
+    <h2 class="text-3xl font-bold mb-4 border-b-2 border-pink-400 inline-block">Contact Me</h2>
+    <form action="YOUR_FORMSPREE_LINK_HERE" method="POST" class="max-w-xl mx-auto space-y-4">
+      <input type="text" name="name" placeholder="Name" class="w-full p-3 rounded bg-white text-black" required>
+      <input type="email" name="email" placeholder="Email" class="w-full p-3 rounded bg-white text-black" required>
+      <textarea rows="5" name="message" placeholder="Message" class="w-full p-3 rounded bg-white text-black" required></textarea>
+      <button type="submit" class="px-6 py-2 bg-pink-600 text-white rounded hover:bg-pink-700">Send Message</button>
+    </form>
+  </section>
+</main>
+
+<footer class="bg-black bg-opacity-60 text-center py-6">
+  <p class="text-white">&copy; 2025 Vanshika. Designed with 💖 & TailwindCSS.</p>
+</footer>
+
+<script>
+  function toggleDarkMode() {
+    document.documentElement.classList.toggle('dark');
+  }
+</script>
 </body>
-</html> okay just remove video background and make it a gradient background with colours suitable for giving technical+creative+founder vibes from my portfolio and also add a ai avatar sayig hi in top of my portfolio
+</html>
