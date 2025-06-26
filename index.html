@@ -3,89 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vanshika | Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .tab-section { display: none; }
-    .tab-active { display: block; }
-  </style>
+  <title>Your Tech Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
 </head>
-<body class="bg-white text-gray-900 font-sans">
-
-  <!-- Container -->
-  <div class="max-w-4xl mx-auto px-6 py-10 text-center">
-    
-    <!-- Profile + Greeting -->
-    <div class="flex flex-col items-center gap-4">
-      <img src="your-image.jpg" alt="Vanshika" class="w-28 h-28 rounded-full shadow-md" />
-      <h1 class="text-4xl font-bold">Hi, I'm Vanshika 👋</h1>
-      <p class="text-lg text-gray-600">Developer | Designer | Entrepreneur</p>
-    </div>
-
-    <!-- Tabs -->
-    <div class="flex justify-center mt-6 gap-3 flex-wrap">
-      <button onclick="showSection('about')" class="tab-btn bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">About</button>
-      <button onclick="showSection('skills')" class="tab-btn bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">Skills</button>
-      <button onclick="showSection('projects')" class="tab-btn bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">Projects</button>
-      <button onclick="showSection('contact')" class="tab-btn bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">Contact</button>
-    </div>
-
-    <!-- Content Sections -->
-    <div id="about" class="tab-section tab-active mt-10 text-left">
-      <h2 class="text-2xl font-semibold mb-2">About Me</h2>
-      <p>
-        I'm an innovative tech enthusiast building digital solutions for real-world problems.
-        From sleek frontend design to smart business strategies, I craft experiences that leave an impact.
-      </p>
-    </div>
-
-    <div id="skills" class="tab-section mt-10 text-left">
-      <h2 class="text-2xl font-semibold mb-2">Skills</h2>
-      <ul class="list-disc ml-6">
-        <li>HTML, CSS, JavaScript, React, Tailwind</li>
-        <li>Python, Flask, Node.js</li>
-        <li>Figma, Adobe XD</li>
-        <li>Branding, UI/UX, Marketing</li>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">💻 YourName</h1>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-    </div>
+    </nav>
+  </header>
 
-    <div id="projects" class="tab-section mt-10 text-left">
-      <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="border p-4 rounded-lg shadow hover:shadow-lg transition">
-          <h3 class="text-lg font-semibold">Jewelry App</h3>
-          <p class="text-sm text-gray-700 mt-1">
-            React Native app that recommends jewelry based on photos or keywords. Used by 500+ users across India.
-          </p>
-        </div>
-        <div class="border p-4 rounded-lg shadow hover:shadow-lg transition">
-          <h3 class="text-lg font-semibold">Invoice Generator</h3>
-          <p class="text-sm text-gray-700 mt-1">
-            Python GUI-based system for small businesses. Tracks customer data and generates PDF bills.
-          </p>
-        </div>
+  <section class="hero">
+    <img src="your-image.jpg" alt="Your Photo" class="avatar" />
+    <h2>Hi, I'm <span>Your Name</span></h2>
+    <p>Aspiring Developer | Tech Enthusiast | Lifelong Learner</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am passionate about building cool tech solutions and love to explore new tools and frameworks.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>Degree:</strong> B.Tech in Computer Science</li>
+      <li><strong>University:</strong> XYZ University</li>
+      <li><strong>Year:</strong> 2021 - 2025</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Project 1</h3>
+        <p>Short description about what it does.</p>
+      </div>
+      <div class="project-card">
+        <h3>Project 2</h3>
+        <p>Short description about what it does.</p>
       </div>
     </div>
+  </section>
 
-    <div id="contact" class="tab-section mt-10 text-left">
-      <h2 class="text-2xl font-semibold mb-2">Contact</h2>
-      <p>Feel free to connect with me:</p>
-      <ul class="mt-2">
-        <li>📧 Email: yourname@example.com</li>
-        <li>💼 LinkedIn: linkedin.com/in/yourname</li>
-        <li>📱 Instagram: @yourhandle</li>
-      </ul>
-    </div>
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>React</li>
+    </ul>
+  </section>
 
-  </div>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: yourname@example.com</p>
+    <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+  </section>
 
-  <!-- Script for Tabs -->
-  <script>
-    function showSection(id) {
-      document.querySelectorAll('.tab-section').forEach(el => el.classList.remove('tab-active'));
-      document.getElementById(id).classList.add('tab-active');
-    }
-  </script>
-
+  <footer>
+    <p>Made with 💙 by Your Name</p>
+  </footer>
 </body>
 </html>
+
