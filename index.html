@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vanshika | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #1f1c2c, #928DAB);
+      background: linear-gradient(to bottom right, #1e1e2f, #642b73);
+      color: white;
     }
-    .fade-in {
-      animation: fadeIn 1s ease-out forwards;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .avatar-float {
-      animation: float 2.5s ease-in-out infinite;
+    .floaty {
+      animation: float 3s ease-in-out infinite;
     }
     @keyframes float {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
+      50% { transform: translateY(-10px); }
     }
   </style>
 </head>
@@ -34,87 +28,68 @@
   <source src="https://cdn.pixabay.com/download/audio/2022/10/25/audio_d41aa7a05c.mp3?filename=soft-ambient-113310.mp3" type="audio/mp3">
 </audio>
 
-<!-- AI Avatar -->
-<div class="fixed top-4 left-4 flex items-center space-x-2 avatar-float z-50">
-  <img src="https://api.dicebear.com/7.x/bottts-neutral/svg?seed=HiV" alt="AI Avatar" class="w-10 h-10">
-  <div class="bg-white text-black px-3 py-1 rounded-full text-sm font-medium shadow">Hi! I’m Vanshika's AI buddy 👋</div>
+<!-- AI Avatar Greeting -->
+<div class="fixed top-4 left-4 flex items-center gap-2 floaty z-50">
+  <img src="https://api.dicebear.com/7.x/bottts-neutral/svg?seed=Hi" class="w-10 h-10" alt="AI Avatar">
+  <div class="bg-white text-black px-4 py-1 rounded-full text-sm font-semibold shadow">Hi! I’m your virtual guide 😊</div>
 </div>
 
-<!-- Main Content -->
-<div class="max-w-4xl mx-auto px-4 py-16 fade-in text-center">
+<!-- Container -->
+<div class="max-w-4xl mx-auto px-6 py-20 text-center">
+  <img src="your-profile.jpg" class="w-28 h-28 mx-auto rounded-full border-4 border-pink-400 shadow-lg mb-4" alt="Profile Picture">
+  <h1 class="text-4xl font-bold uppercase tracking-wider">Vanshika</h1>
+  <p class="text-xl mt-2 font-light">Developer • Digital Marketer • Creative Strategist</p>
 
-  <!-- Profile -->
-  <img src="your-profile.jpg" alt="Vanshika Profile" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-pink-400 shadow-xl">
-  <h1 class="text-4xl md:text-5xl font-extrabold uppercase mb-2">Vanshika</h1>
-  <p class="text-xl font-medium mb-8">Developer | Digital Marketer | Creative Strategist</p>
-
-  <!-- About -->
-  <section class="mb-12">
-    <h2 class="text-3xl font-bold mb-4 text-pink-300">About Me</h2>
+  <section class="mt-12 text-left">
+    <h2 class="text-3xl font-bold text-pink-400 mb-3">About Me</h2>
     <p class="text-lg leading-relaxed">
-      I'm a passionate Computer Science student with hands-on experience in full-stack development, digital marketing,
-      branding, and launching creative products. From mobile apps to marketing funnels, I bring ideas to life across code and content.
+      I’m a Computer Science student and digital innovator with expertise in building user-first products. From coding mobile apps to leading high-impact marketing campaigns and launching my own brand, I love combining creativity with functionality.
     </p>
   </section>
 
-  <!-- Skills -->
-  <section class="mb-12">
-    <h2 class="text-3xl font-bold mb-4 text-pink-300">Skills</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left text-base">
-      <div class="bg-white bg-opacity-10 p-4 rounded-xl">💻 <strong>Technical:</strong> HTML, CSS, JS, Python, React Native, Firebase</div>
-      <div class="bg-white bg-opacity-10 p-4 rounded-xl">📊 <strong>Marketing:</strong> SEO, Meta Ads, Reels, Analytics</div>
-      <div class="bg-white bg-opacity-10 p-4 rounded-xl">🎨 <strong>Design:</strong> Canva, Figma, Adobe Express</div>
-      <div class="bg-white bg-opacity-10 p-4 rounded-xl">🚀 <strong>Product:</strong> Branding, Funnels, Campaign Strategy</div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="mb-12">
-    <h2 class="text-3xl font-bold mb-4 text-pink-300">Projects</h2>
-    <div class="space-y-4 text-left">
-      <div class="bg-white bg-opacity-10 p-4 rounded-xl">
-        <h3 class="text-xl font-semibold">📱 Vaneecian App</h3>
-        <p>A jewelry recommendation app using ML & React Native. Suggests items based on outfits or text.</p>
-      </div>
-      <div class="bg-white bg-opacity-10 p-4 rounded-xl">
-        <h3 class="text-xl font-semibold">🧾 Invoice Generator</h3>
-        <p>Python GUI app for auto-generating invoices and tracking sales & stock.</p>
-      </div>
-      <div class="bg-white bg-opacity-10 p-4 rounded-xl">
-        <h3 class="text-xl font-semibold">🎪 Innoskill Booth</h3>
-        <p>Designed & ran a pop-up stall. Earned ₹13,000+ from ₹5K. Won "Most Engaging Booth".</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Certifications -->
-  <section class="mb-12">
-    <h2 class="text-3xl font-bold mb-4 text-pink-300">Certifications</h2>
-    <ul class="list-disc list-inside text-left space-y-1 text-lg">
-      <li>📘 Meta Blueprint – Social Media Marketing</li>
-      <li>🐍 Python for Everybody – Coursera</li>
-      <li>🎓 Google Digital Marketing</li>
-      <li>🖌️ Figma UI/UX Design</li>
-      <li>🚀 Digital Ads – LinkedIn Learning</li>
+  <section class="mt-10 text-left">
+    <h2 class="text-3xl font-bold text-pink-400 mb-3">Skills</h2>
+    <ul class="space-y-2 text-lg">
+      <li><strong>🔧 Tech:</strong> HTML, CSS, JS, Python, React Native, Firebase</li>
+      <li><strong>📊 Marketing:</strong> Meta Ads, SEO, Analytics</li>
+      <li><strong>🎨 Design:</strong> Canva, Figma, Adobe Express</li>
+      <li><strong>🚀 Product:</strong> Branding, Funnels, Strategy</li>
+      <li><strong>💬 Soft:</strong> Leadership, Communication, Growth Mindset</li>
     </ul>
   </section>
 
-  <!-- Contact Form -->
-  <section class="mb-16">
-    <h2 class="text-3xl font-bold mb-4 text-pink-300">Contact Me</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4 text-left max-w-md mx-auto">
-      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded bg-white text-black">
-      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded bg-white text-black">
-      <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-3 rounded bg-white text-black"></textarea>
-      <button type="submit" class="bg-pink-500 hover:bg-pink-600 px-5 py-2 rounded text-white font-semibold">Send Message</button>
-    </form>
+  <section class="mt-10 text-left">
+    <h2 class="text-3xl font-bold text-pink-400 mb-3">Projects</h2>
+    <div class="space-y-3">
+      <div>
+        <h3 class="text-xl font-semibold">📱 Vaneecian App</h3>
+        <p>Jewelry recommendation app using ML & React Native.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold">🧾 Invoice Generator</h3>
+        <p>Python-based GUI to auto-generate invoices and track stock.</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold">🎪 Innoskill Booth</h3>
+        <p>Engaging tech-fest stall generating ₹13,000+ from ₹5000.</p>
+      </div>
+    </div>
   </section>
 
+  <section class="mt-10 text-left">
+    <h2 class="text-3xl font-bold text-pink-400 mb-3">Contact Me</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 text-black rounded">
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 text-black rounded">
+      <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-3 text-black rounded"></textarea>
+      <button type="submit" class="bg-pink-500 hover:bg-pink-600 px-6 py-2 rounded text-white font-semibold">Send Message</button>
+    </form>
+  </section>
 </div>
 
 <!-- Footer -->
-<footer class="text-center py-6 bg-black bg-opacity-30">
-  <p class="text-white text-sm">&copy; 2025 Vanshika. Built with ❤️ using Tailwind CSS and creativity.</p>
+<footer class="text-center py-6 bg-black bg-opacity-40">
+  <p class="text-sm">&copy; 2025 Vanshika. Built with ❤️ using Tailwind CSS.</p>
 </footer>
 
 </body>
